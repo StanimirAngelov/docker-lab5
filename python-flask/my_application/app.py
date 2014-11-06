@@ -2,6 +2,8 @@ from flask import Flask
 from flask import request
 app = Flask(__name__)
 
+import os, sys
+
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -21,5 +23,10 @@ def files():
     dirs = os.listdir(path)
 
     for file in dirs:
+
         file = str(file + file + " ")
     return file
+
+	files = str(files + file + " ")
+    return files
+ 
